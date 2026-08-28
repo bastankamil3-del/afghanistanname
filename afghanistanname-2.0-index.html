@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="افغانستان‌نامه 2.0؛ دانشنامه آموزشی درباره ولایت‌ها، تاریخ، فرهنگ، ادبیات و جغرافیای افغانستان.">
+<title>افغانستان‌نامه 2.0 🇦🇫</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}body{font-family:Tahoma,Arial,sans-serif;background:#f5f7f9;color:#20242a;line-height:1.8;transition:.25s}body.dark{background:#101827;color:#f3f4f6}
+:root{--g:#087443;--r:#b51f2a;--y:#d9a400;--card:#fff}body.dark{--card:#1d2938}
+header{position:sticky;top:0;z-index:10;background:linear-gradient(120deg,#111827,#087443);color:white;box-shadow:0 4px 20px #0003}
+.nav{max-width:1200px;margin:auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:15px}.logo{font-size:22px;font-weight:bold;display:flex;align-items:center;gap:9px}.flag{background:white;border-radius:50%;padding:5px;font-size:20px}
+nav{display:flex;gap:17px}nav a{color:#fff;text-decoration:none}nav a:hover{color:#ffe06a}.btn{border:0;border-radius:10px;padding:9px 12px;cursor:pointer;background:#ffffff22;color:#fff;font-size:16px}
+.hero{padding:75px 20px;text-align:center;color:#fff;background:linear-gradient(#0008,#0008),linear-gradient(135deg,var(--g),var(--r))}.hero h1{font-size:clamp(40px,8vw,72px)}.hero h2{color:#ffe58a;font-weight:normal;margin:7px 0}.hero p{max-width:760px;margin:15px auto}
+.search{max-width:760px;margin:25px auto 0;background:#fff;border-radius:50px;padding:7px;display:flex}.search input{flex:1;border:0;outline:0;padding:12px 18px;font-size:16px}.search button{border:0;background:var(--g);color:#fff;border-radius:40px;padding:11px 24px;cursor:pointer}
+section{max-width:1200px;margin:auto;padding:60px 20px}.title{text-align:center;margin-bottom:30px}.title h2{font-size:32px}.title p{opacity:.7}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.stat,.card,.province,.result{background:var(--card);border-radius:18px;padding:22px;box-shadow:0 7px 22px #00000012}.stat{text-align:center}.stat b{display:block;font-size:30px;color:var(--g)}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}.card{transition:.2s}.card:hover,.province:hover{transform:translateY(-4px)}.icon{font-size:42px}.card h3{margin:7px 0}.card p{opacity:.75}
+.province-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px}.province{cursor:pointer;text-align:center;font-weight:bold}.province:hover{background:var(--g);color:#fff}
+.timeline{max-width:850px;margin:auto}.event{background:var(--card);border-right:5px solid var(--g);border-radius:14px;padding:18px;margin:14px 0}
+footer{background:#111827;color:#fff;padding:35px 20px;text-align:center}.modal{position:fixed;inset:0;background:#000b;display:none;align-items:center;justify-content:center;padding:20px;z-index:30}.modal.show{display:flex}.box{max-width:700px;width:100%;background:var(--card);color:inherit;border-radius:20px;padding:28px;position:relative;max-height:85vh;overflow:auto}.close{position:absolute;left:15px;top:10px;border:0;background:transparent;color:inherit;font-size:28px;cursor:pointer}
+.results{display:grid;gap:12px;margin-top:20px}.result{cursor:pointer}.result:hover{outline:2px solid var(--g)}.tag{display:inline-block;background:#08744318;color:var(--g);padding:2px 9px;border-radius:20px;font-size:12px;margin-bottom:5px}
+@media(max-width:750px){nav{display:none}.stats{grid-template-columns:repeat(2,1fr)}.search{border-radius:18px}.search button{border-radius:12px}}
+</style>
+</head>
+<body>
+<header><div class="nav">
+<div class="logo"><span class="flag">🇦🇫</span> افغانستان‌نامه 2.0</div>
+<nav><a href="#home">خانه</a><a href="#provinces">ولایت‌ها</a><a href="#history">تاریخ</a><a href="#culture">فرهنگ</a></nav>
+<button class="btn" onclick="toggleDark()">🌙</button>
+</div></header>
+
+<main id="home">
+<div class="hero"><h1>افغانستان‌نامه</h1><h2>دانشنامه‌ای برای شناخت افغانستان 🇦🇫</h2><p>ولایت‌ها، تاریخ، فرهنگ، ادبیات و جغرافیای افغانستان را در یک جا جست‌وجو و مطالعه کنید.</p>
+<div class="search"><input id="q" placeholder="مثلاً: کابل، بلخ، فرهنگ، تاریخ..."><button onclick="search()">🔎 جست‌وجو</button></div></div>
+
+<section><div class="stats">
+<div class="stat"><b>۳۴</b>ولایت</div><div class="stat"><b>۶</b>بخش اصلی</div><div class="stat"><b>🔎</b>جست‌وجوی سریع</div><div class="stat"><b>📱</b>مناسب موبایل</div>
+</div></section>
+
+<section><div class="title"><h2>📚 بخش‌های افغانستان‌نامه</h2><p>یک دانشنامه آموزشی که می‌توان در آینده بزرگ‌ترش کرد.</p></div>
+<div class="cards">
+<div class="card"><div class="icon">🗺️</div><h3>جغرافیا</h3><p>شناخت موقعیت، طبیعت، کوه‌ها و مناطق افغانستان.</p></div>
+<div class="card"><div class="icon">📜</div><h3>تاریخ</h3><p>مروری ساده بر دوره‌ها و رویدادهای تاریخی مهم.</p></div>
+<div class="card"><div class="icon">✍️</div><h3>ادبیات</h3><p>آشنایی با شعر، زبان و نویسندگان و شاعران.</p></div>
+<div class="card"><div class="icon">🎭</div><h3>فرهنگ</h3><p>غذاها، لباس‌ها، موسیقی، زبان‌ها و سنت‌ها.</p></div>
+<div class="card"><div class="icon">🏛️</div><h3>میراث</h3><p>آثار تاریخی و مکان‌های فرهنگی افغانستان.</p></div>
+<div class="card"><div class="icon">👨‍🏫</div><h3>شخصیت‌ها</h3><p>معرفی شخصیت‌های علمی و فرهنگی با معلومات کوتاه.</p></div>
+</div></section>
+
+<section id="provinces"><div class="title"><h2>🗺️ ۳۴ ولایت افغانستان</h2><p>روی هر ولایت بزن تا کارت معلومات آن باز شود.</p></div><div id="provinceGrid" class="province-grid"></div></section>
+
+<section id="history"><div class="title"><h2>📜 تاریخ</h2><p>چند موضوع برای شروع مطالعه</p></div><div class="timeline">
+<div class="event"><b>افغانستان در دوران باستان</b><p>این سرزمین در مسیر رفت‌وآمد و تعامل تمدن‌ها و فرهنگ‌های گوناگون قرار داشته است.</p></div>
+<div class="event"><b>غزنویان</b><p>غزنی در دوره غزنویان به مرکز مهم سیاسی و فرهنگی منطقه تبدیل شد.</p></div>
+<div class="event"><b>تیموریان و هرات</b><p>هرات در دوره تیموریان از مراکز مهم هنر، معماری، دانش و ادبیات بود.</p></div>
+<div class="event"><b>دوره معاصر</b><p>افغانستان در دوره معاصر دگرگونی‌های سیاسی و اجتماعی فراوانی را تجربه کرده است.</p></div>
+</div></section>
+
+<section id="culture"><div class="title"><h2>🎭 فرهنگ افغانستان</h2></div><div class="cards">
+<div class="card"><div class="icon">🍚</div><h3>غذاهای سنتی</h3><p>قابلی پلو، منتو، آشک و غذاهای محلی از نمونه‌های فرهنگ غذایی کشور هستند.</p></div>
+<div class="card"><div class="icon">🎵</div><h3>موسیقی</h3><p>موسیقی افغانستان دارای سازها و سبک‌های محلی و سنتی گوناگون است.</p></div>
+<div class="card"><div class="icon">📖</div><h3>زبان و ادبیات</h3><p>دری، پشتو و دیگر زبان‌های افغانستان در زندگی فرهنگی مردم نقش دارند.</p></div>
+<div class="card"><div class="icon">👘</div><h3>لباس</h3><p>پوشاک سنتی در مناطق مختلف افغانستان طرح‌ها و سبک‌های متنوع دارد.</p></div>
+</div></section>
+</main>
+
+<footer>© 2026 افغانستان‌نامه 2.0 🇦🇫<br>یک پروژه آموزشی و فرهنگی</footer>
+
+<div id="modal" class="modal"><div class="box"><button class="close" onclick="closeModal()">×</button><div id="modalContent"></div></div></div>
+
+<script>
+const provinces=[
+["بدخشان","فیض‌آباد","شمال‌شرق"],["بادغیس","قلعه‌نو","غرب"],["بغلان","پل‌خمری","شمال"],["بلخ","مزارشریف","شمال"],["بامیان","بامیان","مرکز"],["دایکندی","نیلی","مرکز"],
+["فراه","فراه","غرب"],["فاریاب","میمنه","شمال"],["غور","چغچران","مرکز"],["هلمند","لشکرگاه","جنوب"],["هرات","هرات","غرب"],["جوزجان","شبرغان","شمال"],
+["کابل","کابل","مرکز"],["کندهار","کندهار","جنوب"],["خوست","خوست","جنوب‌شرق"],["کنر","اسعدآباد","شرق"],["کندز","کندز","شمال"],["لغمان","مهترلام","شرق"],
+["لوگر","پل‌علم","مرکز"],["میدان وردک","میدان‌شهر","مرکز"],["ننگرهار","جلال‌آباد","شرق"],["نیمروز","زرنج","جنوب‌غرب"],["نورستان","پارون","شرق"],
+["پکتیا","گردیز","جنوب‌شرق"],["پکتیکا","شرنه","جنوب‌شرق"],["پنجشیر","بازارک","شمال‌شرق"],["پروان","چاریکار","مرکز"],["سمنگان","ایبک","شمال"],
+["سرپل","سرپل","شمال"],["تخار","تالقان","شمال‌شرق"],["ارزگان","ترینکوت","جنوب"],["زابل","قلات","جنوب"],["کاپیسا","محمودراقی","مرکز"],["غزنی","غزنی","مرکز"]
+];
+
+const extra=[
+["افغانستان","جغرافیا","افغانستان کشوری محصور در خشکه در قلب آسیا است."],
+["تاریخ افغانستان","تاریخ","افغانستان دارای پیشینه تاریخی طولانی و تعامل با تمدن‌های گوناگون است."],
+["فرهنگ افغانستان","فرهنگ","فرهنگ افغانستان مجموعه‌ای متنوع از زبان‌ها، هنرها، غذاها، لباس‌ها و سنت‌هاست."],
+["ادبیات افغانستان","ادبیات","شعر و ادبیات فارسی دری، پشتو و دیگر زبان‌های کشور بخشی از میراث فرهنگی افغانستان است."],
+["غذاهای سنتی","فرهنگ","قابلی پلو، منتو و آشک از غذاهای شناخته‌شده افغانستان هستند."]
+];
+
+const descriptions={
+"کابل":"پایتخت افغانستان و یکی از مهم‌ترین مراکز اداری، اقتصادی و فرهنگی کشور.",
+"بلخ":"یکی از مناطق تاریخی مهم افغانستان؛ شهر باستانی بلخ در این ولایت قرار دارد.",
+"هرات":"یکی از شهرهای تاریخی افغانستان با پیشینه مهم در هنر، معماری و ادبیات.",
+"بامیان":"ولایتی کوهستانی و تاریخی در مرکز افغانستان، شناخته‌شده برای میراث و طبیعت آن.",
+"قندهار":"ولایتی مهم در جنوب افغانستان با پیشینه تاریخی و فرهنگی.",
+"ننگرهار":"ولایتی در شرق افغانستان و جلال‌آباد مرکز آن است.",
+"غزنی":"ولایتی تاریخی که شهر غزنی در دوره‌های مختلف اهمیت فرهنگی داشته است."
+};
+
+const grid=document.getElementById("provinceGrid");
+provinces.forEach((p,i)=>{
+const d=document.createElement("div");d.className="province";d.textContent=p[0];d.onclick=()=>provinceInfo(i);grid.appendChild(d);
+});
+
+function provinceInfo(i){
+const p=provinces[i];
+const text=descriptions[p[0]]||`${p[0]} یکی از ولایت‌های افغانستان است. مرکز آن ${p[1]} و موقعیت کلی آن ${p[2]} است.`;
+openModal(`<h2>🇦🇫 ولایت ${p[0]}</h2><p><span class="tag">${p[2]}</span></p><p><b>مرکز:</b> ${p[1]}</p><p>${text}</p>`);
+}
+
+const searchable=[
+...provinces.map(p=>({title:p[0],cat:"ولایت",text:(descriptions[p[0]]||`ولایت ${p[0]} با مرکز ${p[1]} در بخش ${p[2]} افغانستان قرار دارد.`)})),
+...extra.map(x=>({title:x[0],cat:x[1],text:x[2]}))
+];
+
+function search(){
+const q=document.getElementById("q").value.trim().toLowerCase();
+if(!q){openModal("<h2>🔎 جست‌وجو</h2><p>لطفاً یک کلمه یا موضوع بنویسید؛ مثلاً «کابل» یا «فرهنگ».</p>");return}
+const results=searchable.filter(x=>(x.title+" "+x.cat+" "+x.text).toLowerCase().includes(q));
+if(!results.length){openModal(`<h2>نتیجه‌ای پیدا نشد</h2><p>برای «${escapeHtml(q)}» معلوماتی در نسخه فعلی پیدا نشد.</p>`);return}
+openModal(`<h2>🔎 نتایج جست‌وجو (${results.length})</h2><div class="results">${results.map((x,i)=>`<div class="result" onclick="openItem(${searchable.indexOf(x)})"><span class="tag">${x.cat}</span><h3>${escapeHtml(x.title)}</h3><p>${escapeHtml(x.text)}</p></div>`).join("")}</div>`);
+}
+function openItem(i){const x=searchable[i];openModal(`<h2>${escapeHtml(x.title)}</h2><span class="tag">${escapeHtml(x.cat)}</span><p>${escapeHtml(x.text)}</p>`)}
+function openModal(html){document.getElementById("modalContent").innerHTML=html;document.getElementById("modal").classList.add("show")}
+function closeModal(){document.getElementById("modal").classList.remove("show")}
+function escapeHtml(s){return s.replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[m]))}
+function toggleDark(){document.body.classList.toggle("dark");localStorage.setItem("dark",document.body.classList.contains("dark"))}
+if(localStorage.getItem("dark")==="true")document.body.classList.add("dark");
+document.getElementById("q").addEventListener("keydown",e=>{if(e.key==="Enter")search()});
+document.getElementById("modal").addEventListener("click",e=>{if(e.target.id==="modal")closeModal()});
+</script>
+</body>
+</html>
